@@ -1,7 +1,6 @@
 package request
 
 import (
-	"fmt"
 	"io/ioutil"
 	"net/http"
 )
@@ -20,7 +19,7 @@ func buildHeaders(headers map[string]string, request *http.Request) {
 	}
 }
 
-func Get(url string, params map[string]string, headers map[string]string) {
+func Get(url string, params map[string]string, headers map[string]string) []byte {
 	client := &http.Client{}
 	//提交请求
 	request, err := http.NewRequest("GET", url, nil)
@@ -33,7 +32,7 @@ func Get(url string, params map[string]string, headers map[string]string) {
 	response, _ := client.Do(request)
 	body, _ := ioutil.ReadAll(response.Body)
 	defer response.Body.Close()
-	fmt.Println(string(body))
+	return body
 }
 
 func Post() {
