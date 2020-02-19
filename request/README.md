@@ -1,0 +1,1 @@
+Inspired by [requests](https://github.com/psf/requests)
