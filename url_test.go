@@ -8,5 +8,5 @@ import (
 
 func Test_Get(t *testing.T) {
 	resp := request.Get("http://httpbin.org/ip", map[string]string{}, map[string]string{})
-	fmt.Println(string(resp))
+	fmt.Println(resp.Reason)
 }
