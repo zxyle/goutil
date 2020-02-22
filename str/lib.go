@@ -7,7 +7,7 @@ func Capitalize(s string) {
 
 }
 
-func Casefold() {
+func CaseFold() {
 
 }
 
@@ -23,11 +23,11 @@ func Encode() {
 
 }
 
-func Endswith(s, suffix string) bool {
+func EndsWith(s, suffix string) bool {
 	return strings.HasSuffix(s, suffix)
 }
 
-func Expandtabs() {
+func ExpandTabs() {
 
 }
 
@@ -39,7 +39,7 @@ func Format() {
 
 }
 
-func Format_map() {
+func FormatMap() {
 
 }
 
@@ -51,47 +51,47 @@ func Isalnum() {
 
 }
 
-func Isalpha() {
+func IsAlpha() {
 
 }
 
-func Isascii() {
+func IsAscii() {
 
 }
 
-func Isdecimal() {
+func IsDecimal() {
 
 }
 
-func Isdigit() {
+func IsDigit() {
 
 }
 
-func Isidentifier() {
+func IsIdentifier() {
 
 }
 
-func Islower() {
+func IsLower() {
 
 }
 
-func Isnumeric() {
+func IsNumeric() {
 
 }
 
-func Isprintable() {
+func IsPrintable() {
 
 }
 
-func Isspace() {
+func IsSpace() {
 
 }
 
-func Istitle() {
+func IsTitle() {
 
 }
 
-func Isupper() {
+func IsUpper() {
 
 }
 
@@ -99,7 +99,7 @@ func Join() {
 
 }
 
-func Ljust() {
+func LJust() {
 
 }
 
@@ -107,11 +107,11 @@ func Lower(s string) string {
 	return strings.ToLower(s)
 }
 
-func Lstrip() {
+func LStrip() {
 
 }
 
-func Maketrans() {
+func MakeTrans() {
 
 }
 
@@ -122,27 +122,27 @@ func Partition() {
 func Replace() {
 
 }
-func Rfind() {
+func RFind() {
 
 }
 
-func Rindex() {
+func RIndex() {
 
 }
 
-func Rjust() {
+func RJust() {
 
 }
 
-func Rpartition() {
+func RPartition() {
 
 }
 
-func Rsplit() {
+func RSplit() {
 
 }
 
-func Rstrip() {
+func RStrip() {
 
 }
 
@@ -150,18 +150,18 @@ func Split() {
 
 }
 
-func Splitlines() {
+func SplitLines() {
 
 }
 
-func Startswith(s, prefix string) bool {
+func StartsWith(s, prefix string) bool {
 	return strings.HasPrefix(s, prefix)
 }
 
 func Strip(s string) {
 }
 
-func Swapcase() {
+func SwapCase() {
 
 }
 
