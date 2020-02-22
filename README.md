@@ -1,4 +1,5 @@
 # goutil
+Python user, This is for you.
 
 ## Intro
 This is a library for personal use.
