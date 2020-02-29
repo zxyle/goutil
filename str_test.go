@@ -11,3 +11,24 @@ func Test_Zfill(t *testing.T) {
 		panic("err")
 	}
 }
+
+func Test_Strip(t *testing.T) {
+	ret := str.Strip(" s ")
+	if ret != "s" {
+		panic("err")
+	}
+}
+
+func Test_LStrip(t *testing.T) {
+	ret := str.LStrip(" s ")
+	if ret != "s " {
+		panic("err")
+	}
+}
+
+func Test_RStrip(t *testing.T) {
+	ret := str.RStrip(" s ")
+	if ret != " s" {
+		panic("err")
+	}
+}

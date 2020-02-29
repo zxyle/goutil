@@ -1,6 +1,8 @@
 package str
 
-import "strings"
+import (
+	"strings"
+)
 
 func Capitalize(s string) {
 	return
@@ -107,7 +109,16 @@ func Lower(s string) string {
 	return strings.ToLower(s)
 }
 
-func LStrip() {
+func LStrip(s string) string {
+	spaceNum := 0
+	for i := 0; i <= len(s); i++ {
+		if s[i] == ' ' {
+			spaceNum++
+		} else {
+			break
+		}
+	}
+	return s[spaceNum:]
 
 }
 
@@ -142,8 +153,16 @@ func RSplit() {
 
 }
 
-func RStrip() {
-
+func RStrip(s string) string {
+	spaceNum := 0
+	for i := len(s) - 1; i >= 0; i-- { // 去除字符串尾部的所有空格
+		if s[i] == ' ' {
+			spaceNum++
+		} else {
+			break
+		}
+	}
+	return s[:len(s)-spaceNum]
 }
 
 func Split() {
@@ -158,7 +177,8 @@ func StartsWith(s, prefix string) bool {
 	return strings.HasPrefix(s, prefix)
 }
 
-func Strip(s string) {
+func Strip(s string) string {
+	return strings.Trim(s, " ")
 }
 
 func SwapCase() {
