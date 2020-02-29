@@ -109,7 +109,7 @@ func Lower(s string) string {
 	return strings.ToLower(s)
 }
 
-func LStrip(s string) string {
+func LStrip(s string) *string {
 	spaceNum := 0
 	for i := 0; i <= len(s); i++ {
 		if s[i] == ' ' {
@@ -118,7 +118,8 @@ func LStrip(s string) string {
 			break
 		}
 	}
-	return s[spaceNum:]
+	newString := s[spaceNum:]
+	return &newString
 
 }
 
@@ -153,7 +154,7 @@ func RSplit() {
 
 }
 
-func RStrip(s string) string {
+func RStrip(s string) *string {
 	spaceNum := 0
 	for i := len(s) - 1; i >= 0; i-- { // 去除字符串尾部的所有空格
 		if s[i] == ' ' {
@@ -162,7 +163,8 @@ func RStrip(s string) string {
 			break
 		}
 	}
-	return s[:len(s)-spaceNum]
+	newString := s[:len(s)-spaceNum]
+	return &newString
 }
 
 func Split() {
@@ -177,8 +179,9 @@ func StartsWith(s, prefix string) bool {
 	return strings.HasPrefix(s, prefix)
 }
 
-func Strip(s string) string {
-	return strings.Trim(s, " ")
+func Strip(s string) *string {
+	newString := strings.Trim(s, " ")
+	return &newString
 }
 
 func SwapCase() {
