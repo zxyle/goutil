@@ -97,16 +97,16 @@ func IsUpper() {
 
 }
 
-func Join(delimiter string, array []string) string {
-	s := ""
+func Join(delimiter string, array []string) (result string) {
 	for k, v := range array {
+		// Last element
 		if (k + 1) == len(array) {
-			s += v
+			result += v
 		} else {
-			s += v + delimiter
+			result += v + delimiter
 		}
 	}
-	return s
+	return
 }
 
 func LJust() {
