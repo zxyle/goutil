@@ -32,3 +32,10 @@ func Test_RStrip(t *testing.T) {
 		panic("err")
 	}
 }
+
+func Test_Join(t *testing.T) {
+	ret := str.Join(",", []string{"hello", "world", "golang"})
+	if ret != "hello,world,golang" {
+		panic("err")
+	}
+}
