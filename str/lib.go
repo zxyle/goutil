@@ -4,218 +4,272 @@ import (
 	"strings"
 )
 
-func Capitalize(s string) {
-	return
+type PyStr string
 
+func (p PyStr) Capitalize() {
+	panic("no implement")
 }
 
-func CaseFold() {
-
+func (p PyStr) CaseFold() {
+	panic("no implement")
 }
 
-func Center() {
-
+func (p PyStr) Center() {
+	panic("no implement")
 }
 
-func Count() {
-
+func (p PyStr) Count() {
+	panic("no implement")
 }
 
-func Encode() {
-
+func (p PyStr) Encode() {
+	panic("no implement")
 }
 
-func EndsWith(s, suffix string) bool {
-	return strings.HasSuffix(s, suffix)
+func (p PyStr) EndsWith(suffix string) bool {
+	return strings.HasSuffix(p.ToStr(), suffix)
 }
 
-func ExpandTabs() {
-
+func (p PyStr) ExpandTabs() {
+	panic("no implement")
 }
 
-func Find() {
-
+func (p PyStr) Find() {
+	panic("no implement")
 }
 
-func Format() {
-
+func (p PyStr) Format() {
+	panic("no implement")
 }
 
-func FormatMap() {
-
+func (p PyStr) FormatMap() {
+	panic("no implement")
 }
 
-func Index() {
-
+func (p PyStr) Index() {
+	panic("no implement")
 }
 
-func Isalnum() {
-
+func (p PyStr) Isalnum() {
+	panic("no implement")
 }
 
-func IsAlpha() {
-
+func (p PyStr) IsAlpha() {
+	panic("no implement")
 }
 
-func IsAscii() {
-
+func (p PyStr) IsAscii() {
+	panic("no implement")
 }
 
-func IsDecimal() {
-
+func (p PyStr) IsDecimal() {
+	panic("no implement")
 }
 
-func IsDigit() {
-
+func (p PyStr) IsDigit() {
+	panic("no implement")
 }
 
-func IsIdentifier() {
-
+func (p PyStr) IsIdentifier() {
+	panic("no implement")
 }
 
-func IsLower() {
-
+func (p PyStr) IsLower() {
+	panic("no implement")
 }
 
-func IsNumeric() {
-
+func (p PyStr) IsNumeric() {
+	panic("no implement")
 }
 
-func IsPrintable() {
-
+func (p PyStr) IsPrintable() {
+	panic("no implement")
 }
 
-func IsSpace() {
-
+func (p PyStr) IsSpace() {
+	panic("no implement")
 }
 
-func IsTitle() {
-
+func (p PyStr) IsTitle() {
+	panic("no implement")
 }
 
-func IsUpper() {
-
+func (p PyStr) IsUpper() {
+	panic("no implement")
 }
 
-func Join(delimiter string, array []string) (result string) {
+func (p PyStr) Join(array []string) (result string) {
 	for k, v := range array {
 		// Last element
 		if (k + 1) == len(array) {
 			result += v
 		} else {
-			result += v + delimiter
+			result += v + p.ToStr()
 		}
 	}
 	return
 }
 
-func LJust() {
-
+func (p PyStr) LJust() {
+	panic("no implement")
 }
 
-func Lower(s string) string {
-	return strings.ToLower(s)
+func (p PyStr) Lower() string {
+	return strings.ToLower(p.ToStr())
 }
 
-func LStrip(s string) string {
+func (p PyStr) LStrip() string {
 	spaceNum := 0
-	for i := 0; i <= len(s); i++ {
-		if s[i] == ' ' {
+	for i := 0; i <= len(p); i++ {
+		if p[i] == ' ' {
 			spaceNum++
 		} else {
 			break
 		}
 	}
-	newString := s[spaceNum:]
-	return newString
-
+	newString := p[spaceNum:]
+	return newString.ToStr()
 }
 
-func MakeTrans() {
-
+func (p PyStr) MakeTrans() {
+	panic("no implement")
 }
 
-func Partition() {
-
+func (p PyStr) Partition() {
+	panic("no implement")
 }
 
-func Replace() {
-
-}
-func RFind() {
-
+func (p PyStr) Replace() {
+	panic("no implement")
 }
 
-func RIndex() {
-
+func (p PyStr) RFind() {
+	panic("no implement")
 }
 
-func RJust() {
-
+func (p PyStr) RIndex() {
+	panic("no implement")
 }
 
-func RPartition() {
-
+func (p PyStr) RJust() {
+	panic("no implement")
 }
 
-func RSplit() {
-
+func (p PyStr) RPartition() {
+	panic("no implement")
 }
 
-func RStrip(s string) string {
+func (p PyStr) RSplit() {
+	panic("no implement")
+}
+
+func (p PyStr) RStrip() string {
 	spaceNum := 0
-	for i := len(s) - 1; i >= 0; i-- { // 去除字符串尾部的所有空格
-		if s[i] == ' ' {
+	for i := len(p) - 1; i >= 0; i-- { // 去除字符串尾部的所有空格
+		if p[i] == ' ' {
 			spaceNum++
 		} else {
 			break
 		}
 	}
-	newString := s[:len(s)-spaceNum]
+	newString := p[:len(p)-spaceNum]
+	return newString.ToStr()
+}
+
+func (p PyStr) Split() {
+	panic("no implement")
+}
+
+func (p PyStr) SplitLines() {
+	panic("no implement")
+}
+
+func (p PyStr) StartsWith(prefix string) bool {
+	return strings.HasPrefix(p.ToStr(), prefix)
+}
+
+func (p PyStr) Strip() string {
+	newString := p.LStrip()
+	p2 := PyStr(newString)
+	newString = p2.RStrip()
 	return newString
 }
 
-func Split() {
-
+func (p PyStr) SwapCase() {
+	panic("no implement")
 }
 
-func SplitLines() {
-
+func (p PyStr) Title() {
+	panic("no implement")
 }
 
-func StartsWith(s, prefix string) bool {
-	return strings.HasPrefix(s, prefix)
+func (p PyStr) Translate() {
+	panic("no implement")
 }
 
-func Strip(s string) string {
-	newString := LStrip(s)
-	newString = RStrip(newString)
-	return newString
+func (p PyStr) Upper() string {
+	return strings.ToUpper(p.ToStr())
 }
 
-func SwapCase() {
-
-}
-
-func Title() {
-
-}
-
-func Translate() {
-
-}
-
-func Upper(s string) string {
-	return strings.ToUpper(s)
-}
-
-// zero fill
-func Zfill(s string, width int) string {
-	width = width - len(s)
+func (p PyStr) ZFill(width int) string {
+	width = width - len(p)
 	for i := 0; i < width; i++ {
-		if len(s) <= width {
-			s = "0" + s
+		if len(p) <= width {
+			p = "0" + p
 		}
 	}
-	return s
+	return p.ToStr()
+}
+
+func (p PyStr) ToStr() string {
+	return string(p)
+}
+
+type String interface {
+	Capitalize()
+	CaseFold()
+	Center()
+	Count()
+	Encode()
+	EndsWith()
+	ExpandTabs()
+	Find()
+	Format()
+	FormatMap()
+	Index()
+	Isalnum()
+	IsAlpha()
+	IsAscii()
+	IsDecimal()
+	IsDigit()
+	IsIdentifier()
+	IsLower()
+	IsNumeric()
+	IsPrintable()
+	IsSpace()
+	IsTitle()
+	IsUpper()
+	Join()
+	LJust()
+	Lower()
+	LStrip()
+	MakeTrans()
+	Partition()
+	Replace()
+	RFind()
+	RIndex()
+	RJust()
+	RPartition()
+	RSplit()
+	RStrip()
+	Split()
+	SplitLines()
+	StartsWith()
+	Strip()
+	SwapCase()
+	Title()
+	Translate()
+	Upper()
+	ZFill()
+	ToStr()
 }

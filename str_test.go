@@ -5,36 +5,41 @@ import (
 	"testing"
 )
 
-func Test_Zfill(t *testing.T) {
-	ret := str.Zfill("h", 5)
+func Test_ZFill(t *testing.T) {
+	a := str.PyStr("h")
+	ret := a.ZFill(5)
 	if ret != "0000h" {
 		panic("err")
 	}
 }
 
 func Test_Strip(t *testing.T) {
-	ret := str.Strip(" s ")
+	a := str.PyStr(" s ")
+	ret := a.Strip()
 	if ret != "s" {
 		panic("err")
 	}
 }
 
 func Test_LStrip(t *testing.T) {
-	ret := str.LStrip(" s ")
+	a := str.PyStr(" s ")
+	ret := a.LStrip()
 	if ret != "s " {
 		panic("err")
 	}
 }
 
 func Test_RStrip(t *testing.T) {
-	ret := str.RStrip(" s ")
+	a := str.PyStr(" s ")
+	ret := a.RStrip()
 	if ret != " s" {
 		panic("err")
 	}
 }
 
 func Test_Join(t *testing.T) {
-	ret := str.Join(",", []string{"hello", "world", "golang"})
+	a := str.PyStr(",")
+	ret := a.Join([]string{"hello", "world", "golang"})
 	if ret != "hello,world,golang" {
 		panic("err")
 	}
