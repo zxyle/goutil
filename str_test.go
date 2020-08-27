@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/zxyle/goutil/str"
+	"github.com/zxyle/goutils/str"
 	"testing"
 )
 

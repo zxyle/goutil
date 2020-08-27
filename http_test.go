@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/zxyle/goutil/request"
+	"github.com/zxyle/goutils/request"
 	"testing"
 )
 
